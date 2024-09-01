@@ -19,9 +19,6 @@ export default defineNuxtConfig({
      */
     componentDir: './components/ui',
   },
-  alias: {
-    pinia: '/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs',
-  },
 
   compatibilityDate: '2024-09-01',
 });

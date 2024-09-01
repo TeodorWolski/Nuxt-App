@@ -4,13 +4,22 @@ import { defineStore } from 'pinia';
 export const useTasksStore = defineStore({
   id: 'tasks',
   state: () => ({
-    todos: [] as Task[],
+    tasks: [] as Task[],
   }),
   actions: {
+    async fetchTasks() {
+      const response = await $fetch<Task[]>(
+        'https://jsonplaceholder.typicode.com/todos'
+      );
+      this.tasks = response;
+
+      return this.tasks;
+    },
+
     add(task: Task) {
-      this.todos.push({
+      this.tasks.push({
         userId: task.userId ?? 1,
-        id: task.id ?? this.todos.length + 1,
+        id: task.id ?? this.tasks.length + 1,
         title: task.title,
         completed: false,
       });

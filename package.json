@@ -24,9 +24,6 @@
     "tailwindcss-animate": "^1.0.7",
     "vue": "latest"
   },
-  "overrides": {
-    "vue": "latest"
-  },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
     "@nuxtjs/tailwindcss": "^6.12.1",
@@ -35,5 +32,8 @@
     "globals": "^15.9.0",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.3.0"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }
