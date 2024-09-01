@@ -1,17 +1,12 @@
 <script setup lang="ts">
-type Todo = {
-  userId: number;
-  id: number;
-  title: string;
-  completed: boolean;
-};
+import { type Task } from '@/types/task';
 
 const {
-  data: todos,
+  data: tasks,
   pending,
   error,
-} = await useAsyncData('todos', () =>
-  $fetch<Todo[]>('https://jsonplaceholder.typicode.com/todos')
+} = await useAsyncData('tasks', () =>
+  $fetch<Task[]>('https://jsonplaceholder.typicode.com/todos')
 );
 </script>
 
