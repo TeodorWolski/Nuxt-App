@@ -2,8 +2,8 @@
   <div class="min-h-screen flex flex-col bg-gradient">
     <Navigation />
     <main class="flex-grow container mx-auto px-4 py-8">
-      <h1 class="text-4xl font-bold text-center mb-8 text-gray-800">
-        Welcome to My Task Manager
+      <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">
+        Task Manager
       </h1>
       <div class="bg-white shadow-lg rounded-lg p-6">
         <slot />
