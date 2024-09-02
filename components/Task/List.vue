@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import type { Task } from '@/types/task';
+
 defineProps({
   tasks: {
-    type: Array,
+    type: Array as PropType<Task[]>,
     default: () => [],
   },
 });
