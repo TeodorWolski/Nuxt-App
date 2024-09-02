@@ -13,12 +13,12 @@ const {
 <template>
   <div>
     <h2 class="text-2xl font-bold text-gray-800 mb-4">
-      Tasks: {{ tasks.length }}
+      Tasks: {{ tasks?.length }}
     </h2>
     <div v-if="pending">Loading...</div>
     <div v-else-if="error">Error: {{ error.message }}</div>
     <div v-else>
-      <TaskList :tasks="tasks" />
+      <TaskList :tasks="tasks ?? []" />
     </div>
   </div>
 </template>
